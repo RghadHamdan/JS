@@ -7,7 +7,8 @@ const getProducts = async () => {
 const displayProducts = async () => {
     const data = await getProducts();
     const result = data.products.map((product) => {
-        return `<div class='product'>
+        return `
+        <div class='product'>
         <img src='${product.thumbnail}' alt=${product.description}>
             <h3>${product.title}</h3>
             <span>${product.price}</span>

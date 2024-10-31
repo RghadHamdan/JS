@@ -1,4 +1,5 @@
 @import './base.css';
+
 header {
     background-color: rgba(255, 20, 147, 0.1);
     color: #141313;
@@ -7,7 +8,10 @@ header {
     position: sticky;
     top: 0;
 }
-header h1 {padding-bottom: 5px;}
+
+header h1 {
+    padding-bottom: 5px;
+}
 
 header .navbar ul {
     padding: 0;
@@ -19,6 +23,7 @@ header .navbar ul {
 header .navbar ul li {
     margin: 0 15px;
 }
+
 .category {
     background-color: lavenderblush;
     width: 25%;
@@ -28,20 +33,21 @@ header .navbar ul li {
     text-align: center;
 }
 
-.product span{
+.product span {
     display: flex;
     color: deeppink;
     font-weight: bold;
     justify-content: center;
 }
 
-.scrollNavber{
-    background-color:white;
+.scrollNavber {
+    background-color: white;
 }
 
 .products {
-     margin: 30px 0; 
+    margin: 30px 0;
 }
+
 .product {
     margin-bottom: 15px;
     text-align: center;
@@ -50,6 +56,7 @@ header .navbar ul li {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
 }
+
 .product img {
     width: 100%;
     margin-bottom: 20px;
@@ -68,27 +75,31 @@ header .navbar ul li {
     margin: 30px 0;
 }
 
-.loader-container{
-display: none;
-justify-content: center;
-align-items: center;
-width: 100%;
-height: 100vh;
-position: fixed;
-background-color: rgba(0, 0, 0, 0.5)
+.loader-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5)
 }
-.active{
+
+.active {
     display: flex;
 }
-.loader{
+
+.loader {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     border: 5px solid deeppink;
     border-bottom-color: transparent;
-    animation:rotate 1s infinite linear ;
-}footer {
-    background-color:  lavenderblush;
+    animation: rotate 1s infinite linear;
+}
+
+footer {
+    background-color: lavenderblush;
     color: #050505;
     text-align: center;
     padding: 20px 0;
@@ -96,42 +107,48 @@ background-color: rgba(0, 0, 0, 0.5)
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
- footer .social-media {
+footer .social-media {
 
     display: flex;
     justify-content: space-around;
 }
 
-footer p{
+footer p {
     font-weight: bold;
     font-size: large;
     padding-bottom: 10px;
 }
+
 @keyframes rotate {
-    0%{
+    0% {
         transform: rotate(0deg);
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
     }
 }
-.countdown{
-    background-color:lavenderblush;
+
+.countdown {
+    background-color: lavenderblush;
     text-align: center;
     padding: 20px 0;
 }
-.countdown-timer{
+
+.countdown-timer {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
-.time{
+
+.time {
     background-color: white;
     font-size: x-large;
-    padding: 10px ;
+    padding: 10px;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(255, 20, 147,.3);
+    box-shadow: 0 2px 5px rgba(255, 20, 147, .3);
 }
+
 .pagination-container {
     display: flex;
     justify-content: center;
@@ -150,7 +167,7 @@ footer p{
 .page-link {
     display: block;
     padding: 10px 15px;
-    color:deeppink;
+    color: deeppink;
     text-decoration: none;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -158,7 +175,7 @@ footer p{
 }
 
 .page-link:hover {
-    background-color:deeppink;
+    background-color: deeppink;
     color: #fff;
     border-color: deeppink;
 }
@@ -166,11 +183,65 @@ footer p{
 .page-item.active .page-link {
     background-color: deeppink;
     color: #fff;
-    border-color:deeppink;
+    border-color: deeppink;
 }
 
 .page-item.disabled .page-link {
     color: #ccc;
     cursor: not-allowed;
     border-color: #ddd;
+}
+
+.my-modal {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.my-modal .img {
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.my-modal img {
+    width: 400px;
+}
+
+.close-btn,
+.right-btn,
+.left-btn {
+    position: absolute;
+    color: palevioletred;
+    background-color: #f4d5e6;
+    font-size: large;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.close-btn {
+    top: 10px;
+    right: 10px;
+}
+
+.left-btn {
+    left: 10px;
+    top: 50%;
+}
+
+.right-btn {
+    right: 10px;
+    top: 50%;
+}
+.d-none {
+    display: none !important;
 }
